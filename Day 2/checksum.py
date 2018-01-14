@@ -15,13 +15,16 @@ SPREADSHEET = """1208	412	743	57	1097	53	71	1029	719	133	258	69	1104	373	367	365
 2290	157	2759	3771	4112	2063	153	3538	3740	130	3474	1013	180	2164	170	189
 525	1263	146	954	188	232	1019	918	268	172	1196	1091	1128	234	650	420"""
 
+# I make a matrix with the elements.
 lines = []
 lines = SPREADSHEET.split('\n')
 for i in range(len(lines)):
     lines[i] = lines[i].split('\t')
 
+# Initializes the result variable
 checksum = 0
 
+# Calculates min and max and add it to the checksum.
 for lst in lines:
     mn = lst[0]
     mx = lst[0]
