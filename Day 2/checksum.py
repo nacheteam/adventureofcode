@@ -26,8 +26,8 @@ checksum = 0
 
 # Calculates min and max and add it to the checksum.
 for lst in lines:
-    mn = lst[0]
-    mx = lst[0]
+    mn = int(lst[0])
+    mx = int(lst[0])
     for item in lst:
         if mx<int(item):
             mx = int(item)
