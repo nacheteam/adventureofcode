@@ -511,10 +511,12 @@ ydjhhf yeltadb lwi cjdcb ovaox xrdm vkxub
 zax xza admbc lvpzfeh auxn rwasj
 kebx eild nrskdr meja jxczomh gcne"""
 
+# Splits and takes each passphrase
 passphrases_list = PASSPHRASES.split('\n')
 
 valid = 0
 
+# Splits the words and sorts them so if two words nearby are equal then that's not valid.
 for pss in passphrases_list:
     ok = True
     words = sorted(pss.split(' '),key=str.lower)
