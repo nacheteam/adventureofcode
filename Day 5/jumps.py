@@ -1056,10 +1056,12 @@ JUMPS = """1
 -458
 -705"""
 
+# Parse the jumps to array of integers.
 jump_list = JUMPS.split('\n')
 for i in range(len(jump_list)):
     jump_list[i] = int(jump_list[i])
 
+# While the index is in good range read the element and add it to index, increment the element and add one to the number of jumps.
 index = 0
 jumps_done = 0
 while index<len(jump_list):
