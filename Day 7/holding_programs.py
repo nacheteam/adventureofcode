@@ -1230,6 +1230,7 @@ vgkhk (76)
 cckrzh (6841) -> hdinwud, dqzkic, vrxkr
 """
 
+# Split the lines of the program and parse all keys (program names) and all the keys that are on the right side of the lines (holded programs)
 lines = PROGRAMS.split('\n')
 all_programs = []
 holded_programs = []
@@ -1247,6 +1248,7 @@ for line in lines:
                 else:
                     holded_programs.append(holded)
 
+# If the program is not holded by anybody, then it should be the bottom one.
 for program in all_programs:
     holded_bool = False
     for holded_program in holded_programs:
