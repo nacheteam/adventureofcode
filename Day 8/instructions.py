@@ -999,6 +999,7 @@ w dec -934 if ubi < 4491
 t dec 799 if sy <= 4638
 he inc -446 if xp > -2075"""
 
+# You need to parse each instruction and process it.
 instruction_list = INSTRUCTIONS.split('\n')
 register_keys = []
 register_values = []
@@ -1006,8 +1007,10 @@ conditionals = ["==", "!=", "<", ">", "<=", ">="]
 max_held = 0
 
 for instruction in instruction_list:
+    #Part 2
     if max(register_values)>max_held:
         max_held = max(register_values)
+
     register_key = ""
     if "inc" in instruction:
         register_key = instruction.split('inc')[0].strip()
